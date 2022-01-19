@@ -27,7 +27,7 @@ movimentações ou há movimentações onde não é possível identificar o port
     > movimentações onde não é possivel identificar o nome e o documento do portador.
 
 - É possível identificar o Órgão do portador do CPGF?
-
+    > Sim, é possivel.
 - Qual o nome do Órgão cujo código é 20402?
 
 - É possível identificar o Nome e Documento (CNPJ) dos favorecidos pela utilização do
