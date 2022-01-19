@@ -18,6 +18,7 @@
   "homepage": "https://github.com/wivsonmachado/teste-amlconsulting#readme",
   "dependencies": {
     "express": "^4.17.2",
-    "pg": "^8.7.1"
+    "pg": "^8.7.1",
+    "pgtools": "^0.3.2"
   }
 }
