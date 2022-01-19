@@ -20,9 +20,11 @@
 
 - Qual a URL da paǵina com a descrição dos campos (ou dicionário de dados) da CPGF?
     > https://www.portaldatransparencia.gov.br/pagina-interna/603393-dicionario-de-dados-cpgf
-    
+
 - É possível identificar o nome e o documento do portador do CPGF, em todas as
 movimentações ou há movimentações onde não é possível identificar o portador?
+    > Baseado no aquivo *Cartão de Pagamento do Governo Federal (CPGF)* existem algumas
+    > movimentações onde não é possivel identificar o nome e o documento do portador.
 
 - É possível identificar o Órgão do portador do CPGF?
 
