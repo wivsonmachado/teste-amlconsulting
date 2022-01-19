@@ -38,6 +38,7 @@ CPGF?
 - É possível identificar a data e o valor das movimentações financeiras do CPGF, em
 todas as movimentações? Ou há movimentações onde não é possível identificar as datas e
 ou valores?
+    > Há movimentações classificadas como sigilosas onde não é possivel identificar as datas das movimentações.
 
 - (código) Qual a soma total das movimentações utilizando o CPGF?
 
