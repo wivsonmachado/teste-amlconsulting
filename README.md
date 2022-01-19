@@ -33,7 +33,7 @@ movimentações ou há movimentações onde não é possível identificar o port
 
 - É possível identificar o Nome e Documento (CNPJ) dos favorecidos pela utilização do
 CPGF?
-    > Sim é possivel, porém em alguns casos de *compra A/V* não consta informação ou documento do favorecido.
+    > Sim é possivel, porém em alguns casos de *compra A/V* não consta informação ou documento do favorecido e nos casos de movimentações sigilosas também não é possivel identificar nome ou documento do favorecido.
 
 - É possível identificar a data e o valor das movimentações financeiras do CPGF, em
 todas as movimentações? Ou há movimentações onde não é possível identificar as datas e
