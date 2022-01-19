@@ -7,6 +7,9 @@
     > a fimde ocultar atos ilícitos das autoridades competentes.
 
 - O que é Cartão de Pagamento do Governo Federal (CPGF), e qual a sua finalidade.
+    > É um meio de pagamento utlizado pelo governo federal semelhante ao cartão de crédito,
+    > propociona à administração publica mais agilidade, controle e modernidade na gestão
+    > de recursos.
 
 - Quem pode utilizar o CPGF?
 
