@@ -12,7 +12,9 @@
     > de recursos.
 
 - Quem pode utilizar o CPGF?
-
+    > O servidor que detenha autorização para proceder à execução financeira, com destinação
+    > estabelecida pelo Ordenador de Despesas.
+    
 - Qual a URL onde é possível fazer o download dos arquivos do CPGF?
 
 - Qual a URL da paǵina com a descrição dos campos (ou dicionário de dados) da CPGF?
