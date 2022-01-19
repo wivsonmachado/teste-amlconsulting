@@ -17,9 +17,10 @@
 
 - Qual a URL onde é possível fazer o download dos arquivos do CPGF?
     > https://www.portaltransparencia.gov.br/download-de-dados
-    
-- Qual a URL da paǵina com a descrição dos campos (ou dicionário de dados) da CPGF?
 
+- Qual a URL da paǵina com a descrição dos campos (ou dicionário de dados) da CPGF?
+    > https://www.portaldatransparencia.gov.br/pagina-interna/603393-dicionario-de-dados-cpgf
+    
 - É possível identificar o nome e o documento do portador do CPGF, em todas as
 movimentações ou há movimentações onde não é possível identificar o portador?
 
