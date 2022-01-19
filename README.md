@@ -3,6 +3,8 @@
 ## Questões
 
 - Com suas palavras explique o que é lavagem de dinheiro.
+    > Lavagem de dinheiro é qualquer meio que possa transformar dinheiro ilícito em lícito, 
+    > a fimde ocultar atos ilícitos das autoridades competentes.
 
 - O que é Cartão de Pagamento do Governo Federal (CPGF), e qual a sua finalidade.
 
