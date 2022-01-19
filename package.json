@@ -1,0 +1,23 @@
+{
+  "name": "teste-amlconsulting",
+  "version": "1.0.0",
+  "description": "Projeto para o teste da AML Consulting",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wivsonmachado/teste-amlconsulting.git"
+  },
+  "author": "Wivson Machado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wivsonmachado/teste-amlconsulting/issues"
+  },
+  "homepage": "https://github.com/wivsonmachado/teste-amlconsulting#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "pg": "^8.7.1"
+  }
+}
