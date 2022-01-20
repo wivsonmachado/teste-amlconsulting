@@ -34,6 +34,11 @@ app.get("/classified-transactions-sum", async (req, res) =>{
     res.send({"Resposta questão L": sum.rows})
 })
 
+app.get("/org-classified-transaction-sum", async (req, res) =>{
+    const query = `SELECT nome_org, SUM(valor_transacao) AS soma FROM cpgf GROUP BY nome_org ORDER BY soma DESC;`
+    const sum = await pool.query(query)
+    res.send({"Resposta questão M": sum.rows[0]})
+})
 
 
 
