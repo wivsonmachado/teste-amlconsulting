@@ -33,9 +33,5 @@ const connDB = async () => {
   }
 }
 
-connDB().then(res => {
-  if (res) {
-    console.log(`Table created`)
-  }
-})
+module.exports.connDB = connDB
 
