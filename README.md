@@ -44,9 +44,9 @@ ou valores?
     > A soma total das movimentações é de R$ 5.619.007,00
     ```JavaScript
     app.get("/classified-transactions-sum", async (req, res) =>{
-    const query = `SELECT SUM(valor_transacao) FROM cpgf WHERE transacao = 'Informações protegidas por sigilo';`
-    const sum = await pool.query(query)
-    res.send({"Resposta questão L": sum.rows})
+        const query = `SELECT SUM(valor_transacao) FROM cpgf WHERE transacao = 'Informações protegidas por sigilo';`
+        const sum = await pool.query(query)
+        res.send({"Resposta questão L": sum.rows})
     })
     ```
 
@@ -60,12 +60,33 @@ ou valores?
     })
     ```
 
-- (código) Qual o Órgão que mais realizou movimentações sigilosas no período e qual o
-
-valor (somado)?
+- (código) Qual o Órgão que mais realizou movimentações sigilosas no período e qual o valor (somado)?
+    > O órgão que mais realizou movimentações sigilosas foi a Presidência da República e o valor somado é de R$ 1.715.145,14
+    ```JavaScript
+    app.get("/org-classified-transaction-sum", async (req, res) =>{
+        const query = `SELECT nome_org, SUM(valor_transacao) AS soma FROM cpgf GROUP BY nome_org ORDER BY soma DESC;`
+        const sum = await pool.query(query)
+        res.send({"Resposta questão M": sum.rows[0]})
+    })
+    ```
 
 - (código) Qual o nome do portador que mais realizou saques no período? Qual a soma
 dos saques realizada por ele? Qual o nome do Órgão desse portador?
+    > O portador que mais realizou saques foi o **Rafael Ferreira Costa** a soma dos saques foi de R$ 24.520,00 e ele pertence ao **Instituto Chico Mendes de Conservação da Biodiversidade**
+    ```JavaScript
+    app.get("/most-user-cash-atm", async (req, res) =>{
+        const query = `SELECT
+        nome_org,
+        nome_portador,
+        SUM(valor_transacao) AS soma 
+        FROM cpgf 
+        WHERE transacao = 'SAQUE CASH/ATM BB' OR transacao = 'SAQUE - INT$ - APRES' 
+        GROUP BY nome_org, nome_portador
+        ORDER BY soma DESC;`
+        const sum = await pool.query(query)
+        res.send({"Resposta questão N": sum.rows[0]})
+    })
+    ```
 
 - (código) Qual o nome do favorecido que mais recebeu compras realizadas utilizando o
 CPGF?
