@@ -1,5 +1,6 @@
 const express = require('express')
 const { connDB } = require('./createTable')
+const { csvStream } = require('./insertCsv')
 
 const app = express()
 const port = 3000
@@ -14,6 +15,11 @@ app.get('/createDb', (req, res) => {
     })
 })
 
+app.get('/insertData', (req, res) =>{
+    res.end(() =>{
+        csvStream()
+    })
+})
 
 
 
