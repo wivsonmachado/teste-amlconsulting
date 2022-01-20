@@ -5,7 +5,7 @@ const { csvStream } = require('./insertCsv')
 const app = express()
 const port = 3000
 
-app.get('/createDb', (req, res) => {
+app.get('/create-db', (req, res) => {
     res.end(() => {
         connDB().then(res => {
             if (res) {
@@ -15,7 +15,7 @@ app.get('/createDb', (req, res) => {
     })
 })
 
-app.get('/insertData', (req, res) =>{
+app.get('/insert-data', (req, res) =>{
     res.end(() =>{
         csvStream()
     })
