@@ -1,5 +1,6 @@
 const express = require('express')
 const { connDB } = require('./createTable')
+const pool = require('./dataBaseConnection')
 const { csvStream } = require('./insertCsv')
 
 const app = express()
@@ -21,6 +22,11 @@ app.get('/insert-data', (req, res) =>{
     })
 })
 
+app.get("/all-transactions-sum", async (req, res) =>{
+    const query = `SELECT SUM(valor_transacao) AS soma FROM cpgf;`
+    const sum = await pool.query(query)
+    res.send({"Resposta questão K": sum.rows})
+})
 
 
 
