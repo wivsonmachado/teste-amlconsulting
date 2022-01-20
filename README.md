@@ -53,10 +53,10 @@ ou valores?
 - (código) Qual a soma das movimentações sigilosas ?
     > A soma total das movimentações sigilosas é de R$ 3.108.731,15
     ```JavaScript
-    app.get("/org-classified-transaction-sum", async (req, res) =>{
-        const query = `SELECT nome_org, SUM(valor_transacao) AS soma FROM cpgf GROUP BY nome_org ORDER BY soma DESC;`
+    app.get("/classified-transactions-sum", async (req, res) =>{
+        const query = `SELECT SUM(valor_transacao) FROM cpgf WHERE transacao = 'Informações protegidas por sigilo';`
         const sum = await pool.query(query)
-        res.send({"Resposta questão M": sum.rows[0]})
+        res.send({"Resposta questão L": sum.rows})
     })
     ```
 
