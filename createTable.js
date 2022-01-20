@@ -1,4 +1,4 @@
-const client = require('./dataBaseConnection.js')
+const pool = require('./dataBaseConnection.js')
 
 
 const connDB = async () => {
@@ -22,14 +22,11 @@ const connDB = async () => {
       valor_transacao DECIMAL(15, 2)
     );`
 
-    await client.connect()
-    await client.query(query)
+    await pool.query(query)
     return true
   } catch (error) {
     console.error(error)
     return false
-  } finally {
-    client.end()
   }
 }
 
