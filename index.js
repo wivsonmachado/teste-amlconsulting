@@ -50,9 +50,18 @@ app.get("/most-user-cash-atm", async (req, res) =>{
     GROUP BY nome_org, nome_portador
     ORDER BY soma DESC;`
     const sum = await pool.query(query)
-    res.send({"Resposta questão M": sum.rows[0]})
+    res.send({"Resposta questão N": sum.rows[0]})
 })
 
+app.get("/most-favored", async (req, res) =>{
+    const query = `SELECT nome_favorecido,
+    COUNT(nome_favorecido) AS quantidade
+    FROM cpgf 
+    GROUP BY nome_favorecido 
+    ORDER BY quantidade DESC;`
+    const sum = await pool.query(query)
+    res.send({"Resposta questão O": sum.rows[3]})
+})
 
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`)
