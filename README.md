@@ -41,6 +41,14 @@ ou valores?
     > Há movimentações classificadas como sigilosas onde não é possivel identificar as datas das movimentações.
 
 - (código) Qual a soma total das movimentações utilizando o CPGF?
+    > A soma total das movimentações é de R$ 5.619.007,00
+```JavaScript
+    app.get("/classified-transactions-sum", async (req, res) =>{
+    const query = `SELECT SUM(valor_transacao) FROM cpgf WHERE transacao = 'Informações protegidas por sigilo';`
+    const sum = await pool.query(query)
+    res.send({"Resposta questão L": sum.rows})
+})
+```
 
 - (código) Qual a soma das movimentações sigilosas ?
 
