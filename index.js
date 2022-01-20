@@ -40,6 +40,18 @@ app.get("/org-classified-transaction-sum", async (req, res) =>{
     res.send({"Resposta questão M": sum.rows[0]})
 })
 
+app.get("/most-user-cash-atm", async (req, res) =>{
+    const query = `SELECT
+    nome_org,
+    nome_portador,
+    SUM(valor_transacao) AS soma 
+    FROM cpgf 
+    WHERE transacao = 'SAQUE CASH/ATM BB' OR transacao = 'SAQUE - INT$ - APRES' 
+    GROUP BY nome_org, nome_portador
+    ORDER BY soma DESC;`
+    const sum = await pool.query(query)
+    res.send({"Resposta questão M": sum.rows[0]})
+})
 
 
 app.listen(port, () => {
