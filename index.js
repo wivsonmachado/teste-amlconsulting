@@ -28,6 +28,12 @@ app.get("/all-transactions-sum", async (req, res) =>{
     res.send({"Resposta questão K": sum.rows})
 })
 
+app.get("/classified-transactions-sum", async (req, res) =>{
+    const query = `SELECT SUM(valor_transacao) FROM cpgf WHERE transacao = 'Informações protegidas por sigilo';`
+    const sum = await pool.query(query)
+    res.send({"Resposta questão L": sum.rows})
+})
+
 
 
 
