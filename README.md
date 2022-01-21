@@ -90,5 +90,17 @@ dos saques realizada por ele? Qual o nome do Órgão desse portador?
 
 - (código) Qual o nome do favorecido que mais recebeu compras realizadas utilizando o
 CPGF?
+    > O favorecido que mais recebeu foi o **MERCADOPAGO.COM REPRESENTACOES LTDA.** com **123** compras realizadas.
+    ```JavaScript
+    app.get("/most-favored", async (req, res) =>{
+        const query = `SELECT nome_favorecido,
+        COUNT(nome_favorecido) AS quantidade
+        FROM cpgf 
+        GROUP BY nome_favorecido 
+        ORDER BY quantidade DESC;`
+        const sum = await pool.query(query)
+        res.send({"Resposta questão O": sum.rows[3]})
+    })
+    ```
 
 - Descreva qual a abordagem utilizada para desenvolver o código para os ítens de K a O.
