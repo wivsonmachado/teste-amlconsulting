@@ -104,3 +104,15 @@ CPGF?
     ```
 
 - Descreva qual a abordagem utilizada para desenvolver o código para os ítens de K a O.
+    > Foi escolhida a linguagem de back-end NodeJS para realizar o teste proposto, após feito
+    > download do arquivo CSV a primeira ação foi construir o banco de dados com PostgreSQL e
+    > tranferir os dados do arquivo CSV para o banco de dados, para que pudesse ser manipulado.
+
+    > A construção do banco de dados foi realizada com o pacote node-postgres, foram criados
+    > três modulos diferentes um para a conexão com o banco, no qual os parametros de conexão
+    > devem ser inseridos em um arquivo .env, outro modulo é referente à criação da 
+    > tabela e o ultimo modulo é a leitura e a inserção dos dados do CSV no banco.
+
+    > Após a criação do banco, já com os dados foi criado um servidor HTTP com o pacote express,
+    > nele foram criadas rotas com querys que requisitam ao banco de dados e retornam o resultado
+    > das questões propostas.
